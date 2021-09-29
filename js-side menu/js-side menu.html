@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sym{
+            float: right;
+            position: relative;
+            left: 20px;
+            font-size: 20px;
+            color: white;
+            
+        }
+        #sym:hover{
+            cursor: context-menu;
+        }
+        #left{
+            position: absolute;
+            background:rgb(4, 6, 126);
+            width: 0%;
+            height: 100%;
+            top: 0px;
+            z-index: 1;
+            transition-property:width;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+        #right{
+            position: absolute;
+            background-color: royalblue;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+        }
+    </style>
+    <script>
+        function myfun(){
+            var w=document.getElementById("left").style .width;
+            if(w=="30%")
+            document.getElementById("left").style.width="0%";
+            else
+            document.getElementById("left").style.width="30%";
+        }
+    </script>
+</head>
+<body>
+    <div id="left" ><div id="sym" onclick="myfun()">&#9776;</div></div>
+    <div id="right"></div>
+</body>
+</html>
